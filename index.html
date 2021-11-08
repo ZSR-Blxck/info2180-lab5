@@ -8,19 +8,27 @@
 		<link href="world.css" type="text/css" rel="stylesheet" />
 
 		<!-- you write this -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="world.js" type="text/javascript"></script>
+
 	</head>
 
 	<body>
-		<header>
-			<h1>World Database Lookup</h1>
-		</header>
+		<div class='topbar'>
+			<header>
+				<h1>World Database Lookup</h1>
+			</header>
+			<img src="world.jpeg">
+		</div>
 
 		<main>
 			<div id="controls">
-				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<form name="form" id="form" method="post" action="world.php">
+					<input id="country" type="search" name="country" placeholder="Enter country name" />
+					<button id="lookup">Country Data</button>
+					<button id="lookup1">City Data</button>
+				</form>
 			</div>
 			
 			<div id="result">
